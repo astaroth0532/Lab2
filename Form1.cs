@@ -61,4 +61,18 @@ namespace Lab2
             base.NORM();
         }
     }
+    class Vector : Norma
+    {
+        public override void ABS()
+        {
+            Math.Sqrt();
+        }
+        public override void NORM()
+        {
+            
+            Norm = Math.Pow(a, 2) + Math.Pow(bi, 2);
+            base.NORM();
+        }
+    }
 }
+
