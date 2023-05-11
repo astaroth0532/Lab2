@@ -45,17 +45,5 @@ namespace Lab2
             }
             
         }
-        public class Vector : Norma //клас-наслідник для роботи з векторами
-        {
-            public override double NORM(int x, int y)  //перевизначений метод норми
-            {
-                Norm = Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
-                return Norm;
-            }
-            public override double ABS(int x, int y) //перевизначений метод модуля
-            {
-                return Math.Max(Math.Abs(x),Math.Abs(y));
-            }
-        }
     }
 }

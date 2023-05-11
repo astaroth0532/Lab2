@@ -28,30 +28,33 @@ namespace Lab2
         /// </summary>
         private void InitializeComponent()
         {
-            this._normBtn = new System.Windows.Forms.Button();
+            this._addBtn = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this._AbsBtn = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this._absBtn = new System.Windows.Forms.Button();
             this._resLbl = new System.Windows.Forms.Label();
+            this._sbtrBtn = new System.Windows.Forms.Button();
+            this._multBtn = new System.Windows.Forms.Button();
+            this._divBtn = new System.Windows.Forms.Button();
+            this._powBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // _normBtn
+            // _addBtn
             // 
-            this._normBtn.Location = new System.Drawing.Point(12, 218);
-            this._normBtn.Name = "_normBtn";
-            this._normBtn.Size = new System.Drawing.Size(75, 23);
-            this._normBtn.TabIndex = 0;
-            this._normBtn.Text = "Норма";
-            this._normBtn.UseVisualStyleBackColor = true;
-            this._normBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this._normBtn_MouseClick);
+            this._addBtn.Location = new System.Drawing.Point(9, 221);
+            this._addBtn.Name = "_addBtn";
+            this._addBtn.Size = new System.Drawing.Size(75, 23);
+            this._addBtn.TabIndex = 0;
+            this._addBtn.Text = "Додавання";
+            this._addBtn.UseVisualStyleBackColor = true;
+            this._addBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this._normBtn_MouseClick);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(195, 51);
+            this.textBox1.Location = new System.Drawing.Point(177, 51);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(68, 20);
             this.textBox1.TabIndex = 1;
@@ -59,7 +62,7 @@ namespace Lab2
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(195, 86);
+            this.textBox2.Location = new System.Drawing.Point(177, 86);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(68, 20);
             this.textBox2.TabIndex = 1;
@@ -70,48 +73,37 @@ namespace Lab2
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(27, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 13);
+            this.label1.Size = new System.Drawing.Size(133, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Введіть дійсну частину а(або x):";
+            this.label1.Text = "Введіть дійсну частину а:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(27, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 13);
+            this.label2.Size = new System.Drawing.Size(132, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Введіть уявну частину bi (або y):\r\n";
+            this.label2.Text = "Введіть уявну частину bi:\r\n";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(27, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(334, 13);
+            this.label3.Size = new System.Drawing.Size(236, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Програма працює з комплексними числами за замовчуванням.\r\n";
+            this.label3.Text = "Програма працює з комплексними числами.\r\n";
             // 
-            // _AbsBtn
+            // _absBtn
             // 
-            this._AbsBtn.Location = new System.Drawing.Point(370, 218);
-            this._AbsBtn.Name = "_AbsBtn";
-            this._AbsBtn.Size = new System.Drawing.Size(75, 23);
-            this._AbsBtn.TabIndex = 0;
-            this._AbsBtn.Text = "Модуль";
-            this._AbsBtn.UseVisualStyleBackColor = true;
-            this._AbsBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this._AbsBtn_MouseClick);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(30, 128);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(336, 17);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "Поставте галочку для переходу у режим роботи з векторами";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.Form1_Load);
+            this._absBtn.Location = new System.Drawing.Point(333, 221);
+            this._absBtn.Name = "_absBtn";
+            this._absBtn.Size = new System.Drawing.Size(75, 23);
+            this._absBtn.TabIndex = 0;
+            this._absBtn.Text = "Модуль";
+            this._absBtn.UseVisualStyleBackColor = true;
+            this._absBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this._AbsBtn_MouseClick);
             // 
             // _resLbl
             // 
@@ -121,20 +113,63 @@ namespace Lab2
             this._resLbl.Size = new System.Drawing.Size(0, 13);
             this._resLbl.TabIndex = 4;
             // 
+            // _sbtrBtn
+            // 
+            this._sbtrBtn.Location = new System.Drawing.Point(90, 221);
+            this._sbtrBtn.Name = "_sbtrBtn";
+            this._sbtrBtn.Size = new System.Drawing.Size(75, 23);
+            this._sbtrBtn.TabIndex = 0;
+            this._sbtrBtn.Text = "Віднімання";
+            this._sbtrBtn.UseVisualStyleBackColor = true;
+            this._sbtrBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this._AbsBtn_MouseClick);
+            // 
+            // _multBtn
+            // 
+            this._multBtn.Location = new System.Drawing.Point(171, 221);
+            this._multBtn.Name = "_multBtn";
+            this._multBtn.Size = new System.Drawing.Size(75, 23);
+            this._multBtn.TabIndex = 0;
+            this._multBtn.Text = "Множення";
+            this._multBtn.UseVisualStyleBackColor = true;
+            this._multBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this._AbsBtn_MouseClick);
+            // 
+            // _divBtn
+            // 
+            this._divBtn.Location = new System.Drawing.Point(252, 221);
+            this._divBtn.Name = "_divBtn";
+            this._divBtn.Size = new System.Drawing.Size(75, 23);
+            this._divBtn.TabIndex = 0;
+            this._divBtn.Text = "Ділення";
+            this._divBtn.UseVisualStyleBackColor = true;
+            this._divBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this._AbsBtn_MouseClick);
+            // 
+            // _powBtn
+            // 
+            this._powBtn.Location = new System.Drawing.Point(414, 221);
+            this._powBtn.Name = "_powBtn";
+            this._powBtn.Size = new System.Drawing.Size(75, 23);
+            this._powBtn.TabIndex = 0;
+            this._powBtn.Text = "Степінь";
+            this._powBtn.UseVisualStyleBackColor = true;
+            this._powBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this._AbsBtn_MouseClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(457, 253);
+            this.ClientSize = new System.Drawing.Size(495, 256);
             this.Controls.Add(this._resLbl);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this._AbsBtn);
-            this.Controls.Add(this._normBtn);
+            this.Controls.Add(this._powBtn);
+            this.Controls.Add(this._divBtn);
+            this.Controls.Add(this._multBtn);
+            this.Controls.Add(this._sbtrBtn);
+            this.Controls.Add(this._absBtn);
+            this.Controls.Add(this._addBtn);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -145,15 +180,18 @@ namespace Lab2
 
         #endregion
 
-        private System.Windows.Forms.Button _normBtn;
+        private System.Windows.Forms.Button _addBtn;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button _AbsBtn;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button _absBtn;
         private System.Windows.Forms.Label _resLbl;
+        private System.Windows.Forms.Button _sbtrBtn;
+        private System.Windows.Forms.Button _multBtn;
+        private System.Windows.Forms.Button _divBtn;
+        private System.Windows.Forms.Button _powBtn;
     }
 }
 

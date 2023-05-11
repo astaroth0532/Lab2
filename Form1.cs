@@ -13,15 +13,14 @@ namespace Lab2
     public partial class Form1 : Form
     {
         private readonly Complex _complex = new Complex();
-        private readonly Vector _vector = new Vector();
         public Form1()
         {
             InitializeComponent();
         }
-        int a;
-        int bi;
-        int x;
-        int y;
+        int a1;
+        int bi1;
+        int a2;
+        int bi2;
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -49,36 +48,40 @@ namespace Lab2
 
         private void _normBtn_MouseClick(object sender, MouseEventArgs e)
         {
-            a = Int32.Parse(textBox1.Text);
-            bi = Int32.Parse(textBox2.Text);
-            x = Int32.Parse(textBox1.Text); //ініціалізація змінних
-            y = Int32.Parse(textBox2.Text);
-            if (checkBox1.Checked) //викликання методів норми
-            {
-                _resLbl.Text = "Норма вектору дорівнює: " + Convert.ToString(_vector.NORM(x, y)); 
+            try {
+                a1 = Int32.Parse(textBox1.Text);
+                bi1 = Int32.Parse(textBox2.Text);
+                //ініціалізація змінних 
+                
             }
-            else
+            catch
             {
-                _resLbl.Text = "Норма комплексного числа дорівнює: " + Convert.ToString(_complex.NORM(a, bi));
+
             }
-            
+            finally
+            {
+                _resLbl.Text = "Норма комплексного числа дорівнює: " + Convert.ToString(_complex.NORM(a1, bi1));
+            }
         }
 
         private void _AbsBtn_MouseClick(object sender, MouseEventArgs e)
         {
-            a = Int32.Parse(textBox1.Text);
-            bi = Int32.Parse(textBox2.Text); //ініціалізація змінних
-            x = Int32.Parse(textBox1.Text);
-            y = Int32.Parse(textBox2.Text);
-            if (checkBox1.Checked) //викликання методів модуля
+           
+           
+            
+            try
             {
-                _resLbl.Text = "Модуль вектора дорівнює: " + Convert.ToString(_vector.ABS(x, y));
+                a1 = Int32.Parse(textBox1.Text);
+                bi1 = Int32.Parse(textBox2.Text); //ініціалізація змінних
             }
-            else
+            catch
             {
-                _resLbl.Text = "Модуль комплексного числа дорівнює: " + Convert.ToString(_complex.ABS(a, bi));
-            }
 
+            }
+            finally
+            {
+                _resLbl.Text = "Модуль комплексного числа дорівнює: " + Convert.ToString(_complex.ABS(a1, bi1));
+            }
         }
     }
     
