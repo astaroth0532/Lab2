@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+//using System._complexNumbers;
+using System.Windows.Forms;   
 namespace Lab2
 {
     static class Program
